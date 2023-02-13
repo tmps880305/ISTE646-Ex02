@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: lightskyblue;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.navbar span {
+    display: inline-flex;
+    justify-content: center;
+    flex-grow: 1;
+    border-style: solid none solid none;
+    border-width: 1px;
+}
+
+.navbar a {
+    width: fit-content;
+    padding: 15px;
+}
+
+.container {
+    height: 100%;
+    display: inline-flex;
+    align-items: stretch;
+}
+
+.sidebar {
+    background-image: url('../img/side.jpg');
+    width: 150px;
+    white-space: pre-wrap;
+}
+
+@media only screen and (max-width: 500px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 200px;
+        grid-template-rows: 200px 200px 200px 200px;
+    }
+}
+
+.grid-item {
+border-radius: 8px;
+font-size: 30px;
+align-self: center;
+height: 100%;
+display: flex;
+}
+
+.grid-item div {
+    height: 100%;
+    width: 100%;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to left, #3b570f 50%, plum 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+.grid-item a.flower {
+    color: #cc99ff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-left: -20px;
+}
+
+/* .grid-item a.flower:hover {
+    color: #cc99ff;
+} */
+
+.grid-item a.star {
+font-size: 120px;
+color: #7fa308;
+text-shadow: 2px 2px 4px #e6ed01;
+margin-left: 20px
+}
+
+.grid-item div:hover{
+    background-position: left;
+    cursor: pointer;
+}
+
+.grid-item div:hover a.flower {
+    color: purple;
+}
